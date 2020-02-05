@@ -1,14 +1,21 @@
-var today = new Date ();
-alert ("heelo")
-var hourNow = today.getHours();
-var greeting;
-if (hourNow > 18) {
-    greeting = 'Good evening!';
-} else if (hourNow > 12) {
-    greeting = 'Good afternon!';
-} else if (hourNow> 0) {
-greeting = 'Good morning!';
-} else {
-    greeting = 'Welkome!';
-    } 
-    document.write('<h3>' + greeting +'</h3>'); 
+var showOrder = function (){
+  
+    var userOrder ;
+    var numberOfImages ;
+    var orderImage ='';
+    while (userOrder !== "house"&& userOrder !== "hotel"){
+        userOrder = prompt ("please enter house or hotel.")
+        numberOfImages = prompt("how many images do you want");
+        for (var i = 0 ; i < numberOfImages ; i++){
+            console.log("index is "+ i);
+            if ( userOrder === "hotel"){
+orderImage = orderImage + '<img src="images/hotel.png">';
+}else if ( userOrder === "house"){
+    orderImage = orderImage + '<img src="images/hotel.png">';
+}console.log (orderImage);
+
+}return orderImage;
+}
+
+}
+document.write('<p>' + showOrder() + '</p>');
